@@ -43,6 +43,12 @@ public class RestrictionListManager {
 
     public static void enforceRestrictions(String serviceOfferingName, String templateName, Long templateSize) throws InvalidParameterValueException {
 
+        /*
+         * Do not blow up when given invalid input.
+         */
+        if (serviceOfferingId == null)
+            return;
+
         try {
             final List<Restriction> restrictions = getRestrictions();
 

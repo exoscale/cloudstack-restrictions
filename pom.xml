@@ -3,7 +3,7 @@
   <groupId>io.exo</groupId>
   <artifactId>cloudstack-restrictions</artifactId>
   <packaging>jar</packaging>
-  <version>0.3.1</version>
+  <version>0.3.2</version>
   <name>cloudstack-restrictions</name>
   <description>YAML restrictions for cloudstack</description>
   <url>https://github.com/exoscale/cloudstack-restrictions</url>
@@ -39,7 +39,7 @@
     <dependency>
       <groupId>org.yaml</groupId>
       <artifactId>snakeyaml</artifactId>
-      <version>1.15</version>
+      <version>p1.15</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cloudstack</groupId>
