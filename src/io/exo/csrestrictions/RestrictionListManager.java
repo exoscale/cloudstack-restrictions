@@ -46,7 +46,7 @@ public class RestrictionListManager {
         /*
          * Do not blow up when given invalid input.
          */
-        if (serviceOfferingId == null)
+        if (serviceOfferingName == null)
             return;
 
         try {
