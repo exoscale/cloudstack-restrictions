@@ -41,7 +41,7 @@ public class RestrictionListManager {
         _loaded = true;
     }
 
-    public static void enforceRestrictions(String serviceOfferingId, String templateName, Long templateSize) throws InvalidParameterValueException {
+    public static void enforceRestrictions(String serviceOfferingName, String templateName, Long templateSize) throws InvalidParameterValueException {
 
         try {
             final List<Restriction> restrictions = getRestrictions();
@@ -49,14 +49,14 @@ public class RestrictionListManager {
             for (Restriction restriction: restrictions) {
 
                 if (restriction.getTemplateNamePattern() != null && templateName != null) {
-                    if (serviceOfferingId.equals(restriction.getServiceOfferingId()) &&
+                    if (serviceOfferingName.equals(restriction.getServiceOfferingName()) &&
                         restriction.getTemplateNamePattern().matcher(templateName).find()) {
                         throw new InvalidParameterValueException("Template is restricted for this service offering.");
                     }
                 }
 
                 if (restriction.getMaxTemplateSize() != null) {
-                    if (serviceOfferingId.equals(restriction.getServiceOfferingId()) &&
+                    if (serviceOfferingName.equals(restriction.getServiceOfferingName()) &&
                         (restriction.getMaxTemplateSize() < templateSize)) {
                         throw new InvalidParameterValueException("The required disk size is restricted for this template");
                     }

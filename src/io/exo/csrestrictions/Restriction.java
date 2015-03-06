@@ -6,7 +6,7 @@ public class Restriction {
     private Long _maxTemplateSize = null;
     private String _templateName = null;
     private Pattern _templateNamePattern = null;
-    private String _serviceOfferingId = null;
+    private String _serviceOfferingName = null;
 
     public Long getMaxTemplateSize() {
         return _maxTemplateSize;
@@ -16,8 +16,8 @@ public class Restriction {
         return _templateName;
     }
 
-    public String getServiceOfferingId() {
-        return _serviceOfferingId;
+    public String getServiceOfferingName() {
+        return _serviceOfferingName;
     }
 
     public Pattern getTemplateNamePattern() {
@@ -35,7 +35,7 @@ public class Restriction {
         _templateName = templateName;
     }
 
-    public void setServiceOfferingId(String serviceOfferingId) {
-        _serviceOfferingId = serviceOfferingId;
+    public void setServiceOfferingName(String serviceOfferingName) {
+        _serviceOfferingName = serviceOfferingName;
     }
 }
